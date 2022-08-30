@@ -3,29 +3,31 @@ import ItemList from '../../components/itemList/itemList'
 
 const ItemListContainer = () => {
 
-    const [listaProductos, setProductos] = useState([])
+    const [listaDeProductos, setListaDeProductos] = useState([])
+    
 
     useEffect(() => {
-        const productosCards = async () => {
+
+        const productos = async () => {
             try {
                 const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=zapatilla_nike')
                 let data = await response.json();
                 data.results.splice(0,1) //elimino primer objeto ya que se ve mal la foto y la descipcion
-                setProductos(data.results);
+                setListaDeProductos(data.results);
             }
             catch(e){
                 console.log(e);
 
-            }setTimeout( ()=>{console.log("demora")}, "2000" )
+            }
         
     }
         
-        productosCards()    
+        productos()    
     }, []);
 
     return (
         <>
-            <ItemList prod={listaProductos} />
+            <ItemList prod={listaDeProductos} />
         </>
     )
 
