@@ -31,7 +31,7 @@ const ItemListContainer = () => {
     };
         
         productos()    
-    },);
+    },[]);
 
     return <>{load ? <ItemList prod={listaDeProductos} /> : <div style={load_blq}><img src={ 'img/spinner.gif'} style={spinner_style} alt="Loading"></img>
     <p>Estamos Cargando tu Proxima Compra...</p></div>} </>
