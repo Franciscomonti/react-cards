@@ -22,6 +22,7 @@ const productos_cards = {
     flexDirection: 'column',
     justifyContent: 'sapce-between',
     cursor: 'pointer',
+    position: 'relative',
 }
 
 const productos_cards_img = {
@@ -38,12 +39,12 @@ const productos_cards_title = {
 }
 
 const productos_cards_price = {
-    color: 'black',
+    color: '#2a9d8f',
     
 }
 
 const productos_cards_price_span = {
-    color: '#e63946',
+    color: '#e76f51',
 }
 
 

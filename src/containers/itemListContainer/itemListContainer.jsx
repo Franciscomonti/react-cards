@@ -31,6 +31,7 @@ const ItemListContainer = () => {
     };
         
         productos()    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
 
     return <>{load ? <ItemList prod={listaDeProductos} /> : <div style={load_blq}><img src={ 'img/spinner.gif'} style={spinner_style} alt="Loading"></img>
